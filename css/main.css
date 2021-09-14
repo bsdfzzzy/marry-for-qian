@@ -269,11 +269,47 @@ textarea {
 
 .column {
   flex: 1;
-  margin: auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pinkbg {
   color: red;
   --wired-fab-bg-color: pink;
+}
+
+.avatar {
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.avatar-man {
+  cursor: pointer;
+}
+
+#chat-first, #chat-second {
+  font-size: 40px;
+  margin: auto;
+  text-align: center;
+}
+
+#chat-first {
+  margin-top: -80px;
+}
+
+#chat-second {
+  color: pink;
+}
+
+.spinner {
+  color: pink;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  display: none;
 }

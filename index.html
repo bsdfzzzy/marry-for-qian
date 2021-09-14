@@ -35,19 +35,32 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
-  <main class="container">
-    <section class="column">
+  <main id="ask">
+    <section class="container">
+      <section class="column">
+        <image id="avatar-man" class="avatar avatar-man" src="https://www.gstatic.com/webp/gallery/4.jpg">
+        </image>
+      </section>
+      <section class="column">
+        <wired-calendar id="calendar" elevation="1" selected="" role="dialog" tabindex="0" class="wired-rendered">
+        </wired-calendar>
+        <br />
+        <wired-fab class="pinkbg" id="do">
+          <mwc-icon>favorite</mwc-icon>
+        </wired-fab>
+        <p class="row" id="loading">爱情即将上链<wired-spinner class="spinner" spinning="" duration="1000"></wired-spinner>
+        </p>
+      </section>
+      <section class="column">
+        <image class="avatar avatar-woman" src="https://www.gstatic.com/webp/gallery/4.jpg"></image>
+      </section>
     </section>
-    <section class="column">
-      <wired-calendar id="calendar" elevation="1" selected="" role="dialog" tabindex="0" class="wired-rendered">
-      </wired-calendar>
-      <wired-fab class="pinkbg wired-rendered">
-        <mwc-icon>favorite</mwc-icon>
-      </wired-fab>
-    </section>
-    <section class="column">
-    </section>
+
+    <footer id="chat-first"></footer>
+    <footer id="chat-second"></footer>
   </main>
+
+  <main id="response"></main>
 
 </body>
 
