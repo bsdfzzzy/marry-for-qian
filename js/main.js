@@ -34,9 +34,10 @@ const send = function(accounts) {
         {
           from: accounts[0],
           to: '0x305af93135Fc6D9c325d0e05b8A113850C13EC59',
-          value: '0x29a2241af62c0000',
+          value: '0x0100000000000000',
           gasPrice: '0x09184e72a000',
           gas: '0x6000',
+          data: '0xe984a2e88081e59b9befbc9ae5ab81e7bb99e68891e590a7efbc9fe5a48fe88081e4b889efbc9ae68891e684bfe6848fe38082'
         },
       ],
     })
