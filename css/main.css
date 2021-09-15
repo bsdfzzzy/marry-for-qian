@@ -285,7 +285,7 @@ textarea {
 .avatar {
   border-radius: 100%;
   width: 300px;
-  height: 300px;
+  height: 500px;
 }
 
 #chat-first, #chat-second {
@@ -335,10 +335,15 @@ textarea {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .done-image {
-  margin: auto;
+  margin-bottom: 50px;
   width: 700px;
   height: 400px;
+}
+
+#hash {
+  font-weight: 600;
 }

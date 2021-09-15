@@ -21,8 +21,6 @@ window.onload = function () {
     ethereum.request({ method: 'eth_requestAccounts' })
     .then(acounts => send(acounts))
   });
-
-
 }
 
 const send = function(accounts) {
@@ -41,7 +39,11 @@ const send = function(accounts) {
         },
       ],
     })
-    .then((txHash) => console.log(txHash))
+    .then((txHash) => {
+      const hashElement = document.getElementById('hash');
+      hashElement.textContent = txHash;
+      console.log(txHash)
+    })
     .then(() => {
       const askElement = document.getElementById('ask');
       const doneElement = document.getElementById('done');
