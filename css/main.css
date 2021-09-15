@@ -265,7 +265,8 @@ textarea {
   display: flex;
   align-items: center;
   margin: auto;
-  padding: 100px;
+  width: 1200px;
+  height: 100%;
 }
 
 .column {
@@ -312,9 +313,13 @@ textarea {
   font-size: 30px;
 }
 
+.question {
+  color: #333;
+}
+
 .btn {
   background-color: pink;
-  color: red;
+  color: rgba(220, 0, 0, .7);
   font-size: 40px;
 }
 
@@ -336,6 +341,14 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: white;
+}
+
+#ask {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;  
 }
 
 .done-image {
@@ -346,4 +359,9 @@ textarea {
 
 #hash {
   font-weight: 600;
+}
+
+body {
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
 }
