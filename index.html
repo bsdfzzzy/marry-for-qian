@@ -34,7 +34,6 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
   <main id="ask">
     <section class="container">
       <section class="column">
@@ -42,14 +41,15 @@
         </image>
       </section>
       <section class="column">
-        <wired-calendar id="calendar" elevation="1" selected="" role="dialog" tabindex="0" class="wired-rendered">
-        </wired-calendar>
-        <br />
-        <wired-fab class="pinkbg" id="do">
-          <mwc-icon>favorite</mwc-icon>
-        </wired-fab>
-        <p class="row" id="loading">爱情即将上链<wired-spinner class="spinner" spinning="" duration="1000"></wired-spinner>
-        </p>
+        <div id="request">
+          <p>你愿意嫁给我吗</p>
+          <wired-button id="do" class="btn">我愿意</wired-button>
+        </div>
+        <div id="loading">
+          <mwc-icon class="heart">favorite</mwc-icon>
+          <p class="row">爱情上链中...</p>
+          <wired-spinner class="spinner" spinning="" duration="1000"></wired-spinner>
+        </div>
       </section>
       <section class="column">
         <image class="avatar avatar-woman" src="https://www.gstatic.com/webp/gallery/4.jpg"></image>
@@ -60,7 +60,9 @@
     <footer id="chat-second"></footer>
   </main>
 
-  <main id="response"></main>
+  <main id="done">
+    <image class="done-image" src="https://www.gstatic.com/webp/gallery/4.jpg"></image>
+  </main>
 
 </body>
 

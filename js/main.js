@@ -1,18 +1,32 @@
 window.onload = function () {
-  const calendarElement = document.getElementById('calendar');
-  calendarElement.setAttribute('selected', getToday());
+  // const calendarElement = document.getElementById('calendar');
+  // calendarElement.setAttribute('selected', getToday());
 
-  const manAvatarElement = document.getElementById('avatar-man');
-  manAvatarElement.addEventListener('click', () => playChat('chat-first', '你，愿意嫁给我吗'));
+  // const manAvatarElement = document.getElementById('avatar-man');
+  // manAvatarElement.addEventListener('click', () => playChat('chat-first', '你，愿意嫁给我吗'));
 
   const doButtonElement = document.getElementById('do');
   doButtonElement.addEventListener('click', () => {
-    playChat('chat-second', '我愿意');
+  //   playChat('chat-second', '我愿意');
+  //   setTimeout(() => {
+  //     const loadingElement = document.getElementById('loading');
+  //     loadingElement.style.display = 'flex';
+  //   }, 1000);
+    
+    const requestElement = document.getElementById('request');
+    const loadingElement = document.getElementById('loading');
+    requestElement.style.display = 'none';
+    loadingElement.style.display = 'flex';
+
     setTimeout(() => {
-      const loadingElement = document.getElementById('loading');
-      loadingElement.style.display = 'flex';
-    }, 1000);
+      const askElement = document.getElementById('ask');
+      const doneElement = document.getElementById('done');
+      askElement.style.display = 'none';
+      doneElement.style.display = 'flex';
+    }, 2000);
   });
+
+
 }
 
 const getToday = function() {
